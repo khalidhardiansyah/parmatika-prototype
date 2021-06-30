@@ -1,0 +1,31 @@
+.color-bg{
+    background-color: #1790ff;
+    padding-top: 180px;
+    padding-bottom: 250px;
+}
+.content{
+    max-width: 1375px;
+    padding: 30px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.header-color{
+    background-color: #ffffff;
+    height: 35px;
+}
+.size-card{
+    max-width: 75%;
+    max-height: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sub-title-content{
+    font-family: 'Montserrat', sans-serif;
+    color: #2C2C2C;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}

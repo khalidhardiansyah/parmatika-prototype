@@ -1,0 +1,46 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@700&display=swap');
+
+.bg-color{
+    background-color: #1790ff;
+
+}
+
+.hero-img{
+    border-radius: 50px 0px 0px 50px;
+    max-height: 470px;
+    max-width: 534px;
+    
+}
+
+.title-hero{
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.sub-title-hero{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+}
+
+.sub-title-content{
+    font-family: 'Montserrat', sans-serif;
+    color: #2C2C2C;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+}
+
+.card-job{
+    border-radius: 42px;
+}
+

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@700&display=swap');
+.header-color{
+    background-color: #1790ff;
+    height: 35px;
+}
+.size-card{
+    max-width: 75%;
+    max-height: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.btn-apply{
+    background-color: #1790ff;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 200px;
+}
+.btn-apply:hover{
+    background-color: #137bdd;
+    color: white;
+    
+}
+.sub-title-content{
+    font-family: 'Montserrat', sans-serif;
+    color: #2C2C2C;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}

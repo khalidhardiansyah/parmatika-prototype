@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@700&display=swap');
+.footer-color{
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(0, 0, 0, 0.557508) 0%, rgba(0, 0, 0, 0.898596) 99.99%, #000000 100%);
+}
+
+.sub-title-content-footer{
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+}
+
+.text-set{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 1px;
+  
+}
