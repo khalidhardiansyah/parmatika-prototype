@@ -19,32 +19,38 @@ const routes = [
         path:'/JobApplicant',
         name:'JobApplicant',
         component: () => import("../views/JobApplicant.vue"),
-        beforeEnter: (to, from, next) => {
-            const token = localStorage.getItem('token')
-            const role = localStorage.getItem('role')
-            if(!token) return next('/')
-            if(role == 'Pelamar'){
-                return next()
-            } else {
-                return next('/')
-            } 
-        }
+        // beforeEnter: (to, from, next) => {
+        //     const token = localStorage.getItem('token')
+        //     const role = localStorage.getItem('role')
+        //     if(!token) return next('/')
+        //     if(role == 'Pelamar'){
+        //         return next()
+        //     } else {
+        //         return next('/')
+        //     } 
+        // }
     },
     {
         path:'/JobRecruiter',
         name:'JobRecruiter',
         component: () => import("../views/JobRecruiter.vue"),
-        beforeEnter: (to, from, next) => {
-            const token = localStorage.getItem('token')
-            const role = localStorage.getItem('role')
-            if(!token) return next('/')
-            if(role == 'Pemberi'){
-                return next()
-            } else {
-                return next('/')
-            }
-        }
-    }
+        // beforeEnter: (to, from, next) => {
+        //     const token = localStorage.getItem('token')
+        //     const role = localStorage.getItem('role')
+        //     if(!token) return next('/')
+        //     if(role == 'Pemberi'){
+        //         return next()
+        //     } else {
+        //         return next('/')
+        //     }
+        // }
+    },
+    {
+        path:'/Findjob',
+        name:'FindJob',
+        component:() => import("../views/FindJob.vue")
+    
+    },
     
     
 ];

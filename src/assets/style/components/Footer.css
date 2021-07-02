@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@700&display=swap');
 .footer-color{
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(0, 0, 0, 0.557508) 0%, rgba(0, 0, 0, 0.898596) 99.99%, #000000 100%);
+    background-color: #185ADB;
 }
 
 .sub-title-content-footer{

@@ -1,5 +1,5 @@
 <template>
-  <NavbarUser />
+  <NavbarUser :name="name" />
   
   <div class="container-fluid color-bg">
     <div class="container-sm bg-light content">
@@ -55,7 +55,7 @@
     </div>
     <div class="container-sm my-5 ">
       <h3 class="text-white">List Your Post</h3>
-      <div class="card size-card bg-light mx-5 Smt-5" v-for="(job,i) in Job_details" :key="i" >
+      <div class="card size-card bg-light mx-5 mx-5" v-for="(job,i) in Job_details" :key="i" >
         <h5 class="card-header header-color"></h5>
         <div class="card-body" >
           <h5 class="card-title sub-title-content">
@@ -92,6 +92,7 @@ export default {
       location: "",
       description: "",
       Job_details: null,
+      name:"Jo ko wee"
     };
   },
   methods: {

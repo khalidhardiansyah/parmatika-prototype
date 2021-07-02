@@ -4,7 +4,7 @@
 </template>
 
 <script>
-
+import "@/assets/style/views/App.css"
 
 export default {
   name: 'App',

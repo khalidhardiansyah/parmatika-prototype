@@ -1,5 +1,5 @@
 <template>
-<NavbarUser />
+<NavbarUser :name="name"/>
 <div class="container-fluid ">
     <div class="content" >
 
@@ -30,7 +30,8 @@ export default {
   },
   data(){
       return{
-          Job_details:null
+          Job_details:null,
+          name:"mega wati"
       }
   },
   methods:{

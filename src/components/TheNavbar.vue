@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li class="nav-item px-5 ">
-          <router-link class="nav-link text-nav" aria-current="page" to="/">Find Jobs</router-link>
+          <router-link class="nav-link text-nav" aria-current="page" to="/Findjob">Find Jobs</router-link>
         </li>
         <li class="nav-item px-5">
           <router-link class="nav-link text-nav" to="/">Upload Resume</router-link>

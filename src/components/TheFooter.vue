@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid footer-color">
-        <div class="container-lg py-5">
-        <div class="row row-cols-3 justify-content-lg-between d-flex flex-wrap ">
+        <div class="container-lg py-5 ">
+        <div class="row row-cols-3 justify-content-lg-between d-flex flex-wrap mt-5">
             <div class="col-4 row align-items-center mx-3 ">
                 <h5 class="text-set">Copyright 2021 CariKerja.com</h5>
                 <ul class="list-unstyled d-flex flex-row">

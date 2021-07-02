@@ -2,7 +2,7 @@
   <div class="container-md">
     <div class="card size-card">
       <h5 class="card-header header-color"></h5>
-      <div class="card-body">
+      <div class="card-body px-5 py-5">
         <h5 class="card-title sub-title-content"><span class="material-icons me-3 ">work</span>{{ job_title }}</h5>
         <p class="card-text sub-title-content">
           <i class="material-icons me-3">description </i>{{ job_desc }}
@@ -16,6 +16,9 @@
            <ul class="list-unstyled d-flex justify-content-end">
                <li class="">
                     <slot name="btnapply"></slot>
+               </li>
+               <li>
+                 <slot name="btn-login"></slot>
                </li>
            </ul>
         </div>
