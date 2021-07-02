@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
           <div class="login-page">
-    <form >
+
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Email address</label
@@ -30,14 +30,14 @@
         />
       </div>
     <div class="mb-3">
-        <button type="submit" @click="Login" class="btn px-5 py-2">Login</button>    
+        <button @click="login" class="btn px-5 py-2">Login</button>    
       </div>
       <div class="mb-3">
         <p>Doesn’t have any account? <a href="/signup" class="text-dark">Register Now</a></p> 
            
       </div>
       
-    </form>
+
   </div>
       </div>
       <div class="modal-footer">
@@ -64,12 +64,21 @@ export default {
     methods:{
         async login(){
             const response = await AuthenticationService.login({
-                username: this.email,
-                kataSandi: this.password
+                email: this.email,
+                password: this.password
             })
-            const token = response.data.token
+            const token = response.data.data[0]
+            const role = response.data.data[1]
+            console.log(token,role)
             localStorage.setItem('token', token)
-            this.$root.push('/about')
+            localStorage.setItem('role', role)
+            if(role == 'Pelamar'){
+              this.$router.push('/JobApplicant')
+            }
+            else if(role == 'Pemberi'){
+              this.$router.push('/JobRecruiter')
+            }
+            
         }
     }
 }

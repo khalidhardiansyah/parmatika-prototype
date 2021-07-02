@@ -21,7 +21,7 @@
           <div class="col-lg-5 py-5 my-5">
             <img
               class="hero-img p-3"
-              src="https://assets-a1.kompasiana.com/items/album/2020/08/17/img-20200806-193756-5f3a6b7862e8032a347633d2.jpg"
+              src="https://i.ytimg.com/vi/4Efju-IIOiw/maxresdefault.jpg"
               alt=""
               srcset=""
             />

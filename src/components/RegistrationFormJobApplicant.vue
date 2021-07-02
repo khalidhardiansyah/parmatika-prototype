@@ -1,6 +1,5 @@
 <template>
   <div class="container-fluid">
-    <form >
     <div class="row g-3 py-4">
     <div class="col-12">
       <label class="form-label">Name</label>
@@ -34,10 +33,9 @@
     </div>
 
     <div class="col-12 d-flex py-5 flex-column align-items-center">
-      <button type="submit" class="btn register-btn px-5 py-3" @submit="registerJO">REGISTER</button>
+      <button class="btn register-btn px-5 py-3" @click="registerJA">REGISTER</button>
     </div>
     </div>
-  </form>
   </div>
 </template>
 
@@ -53,19 +51,23 @@ export default {
             age:"",
             date_birth:"",
             phone_number:"",
-            position:"Pelamar"
+            role:"Pelamar"
 
         }
     },
     methods:{
         async registerJA(){
-            const response = await AuthenticationService.login({
-                username: this.email,
-                kataSandi: this.password
+            const response = await AuthenticationService.register({
+                name:this.name,
+                email:this.email,
+                age:this.age,
+                date_birth:this.date_birth,
+                phone_number:this.phone_number,
+                password:this.password,
+                role:this.role
             })
-            const token = response.data.token
-            localStorage.setItem('token', token)
-            this.$root.push('/about')
+            this.$root.push('/home')
+            
         }
     
 }

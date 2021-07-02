@@ -12,17 +12,29 @@ export default{
         const headers = {Authorization: `Bearer ${token}`}
         return Api().patch('change-password', data, {headers})
     },
-    changeData(credentials){
+    lamar(credentials){
         const token = localStorage.getItem('token')
         const headers = {Authorization: `Bearer ${token}`}
-        return Api().post('change-data', credentials, {headers})
+        return Api().post('lamar', credentials, {headers})
     },
     test(credentials){
         return Api().post('test', credentials)
     },
-    soal(){
+    post(){
         const token = localStorage.getItem('token')
         const headers = {Authorization: `Bearer ${token}`}
-        return Api().get('soal', {headers})
-    }
+        return Api().get('post', {headers})
+    },
+    kerjaan(){
+        const token = localStorage.getItem('token')
+        const headers = {Authorization: `Bearer ${token}`}
+        return Api().get('kerjaan', {headers})
+    },
+    apply(credentials){
+        console.log('yeay berhasil')
+        const token = localStorage.getItem('token')
+        const headers = {Authorization: `Bearer ${token}`}
+        return Api().post('apply', credentials, {headers})
+    },
+
 }

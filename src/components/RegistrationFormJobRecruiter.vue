@@ -34,7 +34,7 @@
     </div>
 
     <div class="col-12 d-flex py-5 flex-column align-items-center">
-      <button type="submit" class="btn register-btn px-5 py-3" @submit="registerJO">REGISTER</button>
+      <button class="btn register-btn px-5 py-3" @click="registerJO">REGISTER</button>
     </div>
     </div>
   </form>
@@ -45,28 +45,33 @@
 import AuthenticationService from "../services/Auth-Service";
 export default {
   name: "RegistrationFormJobRecruiter",
-  data() {
-    return {
-      name: "",
-      email: "",
-      password: "",
-      age: "",
-      date_birth: "",
-      phone_number: "",
-      position: "Pemberi",
-    };
-  },
-  methods: {
-    async registerJO() {
-      const response = await AuthenticationService.login({
-        username: this.email,
-        kataSandi: this.password,
-      });
-      const token = response.data.token;
-      localStorage.setItem("token", token);
-      this.$root.push("/about");
+  data(){
+        return{
+            name:"",
+            email:"",
+            password:"",
+            age:"",
+            date_birth:"",
+            phone_number:"",
+            role:"Pemberi"
+
+        }
     },
-  },
+    methods:{
+        async registerJO(){
+            const response = await AuthenticationService.register({
+                name:this.name,
+                email:this.email,
+                age:this.age,
+                date_birth:this.date_birth,
+                phone_number:this.phone_number,
+                password:this.password,
+                role:this.role
+            })
+            this.$root.push('/home')
+            
+        }
+    }
 };
 </script>
 

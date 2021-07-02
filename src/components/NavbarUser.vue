@@ -12,15 +12,6 @@
         <li class="nav-item px-5 ">
           <router-link class="nav-link text-nav" aria-current="page" to="">Find Jobs</router-link>
         </li>
-        <li class="nav-item px-5">
-          <router-link class="nav-link text-nav" to=" ">Upload Resume</router-link>
-        </li>
-        <li class="nav-item px-5">
-          <router-link class="nav-link text-nav" to="/about" tabindex="-1" aria-current="page">About</router-link>
-        </li>
-        <li class="nav-item px-5">
-          <router-link class="nav-link text-nav" to="/contact" tabindex="-1" aria-current="page">Contact</router-link>
-        </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
@@ -41,7 +32,14 @@ export default {
     name : 'NavbarUser',
     methods:{
       Logout(){
-        confirm("Wanna log out?")
+        let c = confirm("Wanna log out?")
+        console.log(c)
+        if(c == true){
+          localStorage.removeItem('token')
+          this.$router.push('/')
+        }else {
+          
+        }
       }
     }
 };

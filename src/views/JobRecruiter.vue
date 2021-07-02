@@ -1,8 +1,9 @@
 <template>
   <NavbarUser />
+  
   <div class="container-fluid color-bg">
     <div class="container-sm bg-light content">
-      <form class="row g-3">
+      <div class="row g-3">
         <div class="col-md-12 border-bottom">
           <h3>Add Job</h3>
         </div>
@@ -12,7 +13,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="Job Tittle"
-            v-model="job_tittle"
+            v-model="job_title"
           />
           <label for="floatingInput">Job Tittle</label>
         </div>
@@ -46,17 +47,17 @@
         </div>
 
         <div class="col-12 d-flex flex-column align-items-end">
-          <button type="submit" class="btn btn-primary" @click="postnow">
+          <button class="btn btn-primary" @click="postnow">
             Post Now
           </button>
         </div>
-      </form>
+      </div>
     </div>
     <div class="container-sm my-5 ">
       <h3 class="text-white">List Your Post</h3>
-      <div class="card size-card mt-5"  >
+      <div class="card size-card bg-light mx-5 Smt-5" v-for="(job,i) in Job_details" :key="i" >
         <h5 class="card-header header-color"></h5>
-        <div class="card-body" v-for="job in job_details" :key="job.id">
+        <div class="card-body" >
           <h5 class="card-title sub-title-content">
             <span class="material-icons me-3">work</span>{{ job.job_title }}
           </h5>
@@ -78,7 +79,7 @@
 
 <script>
 import NavbarUser from "../components/NavbarUser.vue";
-
+import AuthenticationService from '../services/Auth-Service'
 export default {
   name: "JobRecruiter",
   components: {
@@ -86,40 +87,31 @@ export default {
   },
   data() {
     return {
-    //   job_tittle: "",
-    //   salary: "",
-    //   location: "",
-    //   description: "",
-
-      Job_details: [
-        {
-          id: 0,
-          job_title: "KUli",
-          description: "membangun rumah dan jalan dibawah pemerintah belanda",
-          location: "anyer-panarukan",
-          salary: "2000",
-        },
-
-        {
-          id: 1,
-          job_title: "ART",
-          description: "membangun rumah dan jalan dibawah pemerintah belanda",
-          location: "panarukan",
-          salary: "200",
-        },
-        {
-          id: 2,
-          job_title: "Kadrun",
-          description: "membangun negara",
-          location: "monas",
-          salary: "nasi bungkus",
-        },
-      ],
+      job_title: "",
+      salary: "",
+      location: "",
+      description: "",
+      Job_details: null,
     };
   },
   methods: {
-    postnow() {},
-  },
+    async postnow(){
+      const response = await AuthenticationService.lamar({
+                job_title: this.job_title,
+                salary: this.salary,
+                location: this.location,
+                description: this.description,
+            })
+    },
+    async getPost(){
+       const response = await AuthenticationService.post({
+            })
+            this.Job_details = response.data
+      }
+    },
+    beforeMount(){
+        this.getPost()
+    }
 };
 </script>
 

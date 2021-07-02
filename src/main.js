@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
 
-
+/* eslint-disable no-new */
 const app = createApp(App)
 app.use(router)
 app.mount("#app")
