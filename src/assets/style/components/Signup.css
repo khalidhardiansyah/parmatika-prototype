@@ -1,5 +1,5 @@
 .bg-blue{
-    background-color: #1790ff;
+    background-color: white;
     padding-bottom: 200px;
 }
 
@@ -38,7 +38,7 @@ color: black;
     left: -12px;
     width: 622px;
 height: 80px;
-background: #505050;
+background: #1790ff;
 border-radius: 50px 50px 0px 0px;
 font-size: 17px;
 font-weight: 500;
@@ -54,7 +54,7 @@ color: white;
 
 #profile0{
      font-family: 'Montserrat', sans-serif;
-    background: #505050;
+    background: #1790ff;
     color: white;
     border-radius: 0px 0px 50px 50px;
 }

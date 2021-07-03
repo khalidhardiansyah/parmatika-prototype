@@ -4,7 +4,7 @@
     <div class="container-fluid bg-color">
       <div class="container-lg py-5">
         <div class="row justify-content-between py-5">
-          <div class="col-lg-4 py-5 my-5">
+          <div class="col-lg-5 py-5 my-5">
             <div class="d-flex flex-col flex-wrap">
               <h1 class="title-hero">{{ title }}</h1>
               <p class="sub-title-hero mt-5">
@@ -16,7 +16,7 @@
           <div class="col-lg-5 py-5 my-5">
             <img
               class="hero-img p-3"
-              src="https://i.ytimg.com/vi/4Efju-IIOiw/maxresdefault.jpg"
+              src="@/assets/style/bg/hero.svg"
               alt=""
               srcset=""
             />
@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      title: "Let's Make Car",
+      title: "Let's Find Your Dream Job",
       subtitle:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum.",
       title_latest: "Latest Job Posting",

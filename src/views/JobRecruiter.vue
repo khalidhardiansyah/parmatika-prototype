@@ -1,5 +1,9 @@
 <template>
-  <NavbarUser :name="name" />
+<NavbarUser :name="name">
+  <template v-slot:list-JA>
+    <router-link to="" class="dropdown-item text-nav" data-bs-toggle="modal" data-bs-target="#staticBackdrop">XXXX</router-link>
+  </template>
+  </NavbarUser>
   
   <div class="container-fluid color-bg">
     <div class="container-sm bg-light content">
@@ -73,6 +77,40 @@
         </div>
       </div>
     </div>
+
+    <!-- modal job applicant list -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal_header mx-auto">
+        <h5 class="modal-title my-3" id="staticBackdropLabel">List Applicant Job</h5>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Applicant Email</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Job Tittle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="List_applicant in List_applicants" :key="List_applicant.id">
+      <th scope="row">{{List_applicant.id}}</th>
+      <td>{{List_applicant.Applicant_email}}</td>
+      <td>{{List_applicant.Phone_number}}</td>
+      <td>{{List_applicant.Job_tittle}}</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </template>
 
@@ -92,7 +130,12 @@ export default {
       location: "",
       description: "",
       Job_details: null,
-      name:"Jo ko wee"
+      name:"Jo ko wee",
+      List_applicants:[
+        {id:1, Applicant_email:"Lorema@gmail.com", Phone_number:"0999393832", Job_tittle:"Dosen SA tidur"},
+        {id:2, Applicant_email:"Lorema@gmail.com", Phone_number:"0999393832", Job_tittle:"Dosen SA tidur"},
+        {id:3, Applicant_email:"Lorema@gmail.com", Phone_number:"0999393832", Job_tittle:"Dosen SA tidur"},
+      ]
     };
   },
   methods: {

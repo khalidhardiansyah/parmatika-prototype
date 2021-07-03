@@ -3,7 +3,7 @@
   <div class="container-fluid nav-color position-fixed top-0" >
   <nav class="navbar navbar-expand-lg nav-light">
   <div class="container-lg py-3">
-    <router-link class="navbar-brand" to="/">Cari Kerja</router-link>
+    <router-link class="navbar-brand" to="/"><img class="img-brand" src="../assets/style/logo/logo.png"></router-link>
        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>

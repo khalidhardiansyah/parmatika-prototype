@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" v-model="email" />
+      <input type="email" class="form-control" id="inputEmail4" placeholder="masm@gmail.com" v-model="email" />
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Password</label>
