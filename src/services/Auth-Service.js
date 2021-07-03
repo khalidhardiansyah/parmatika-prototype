@@ -31,10 +31,18 @@ export default{
         return Api().get('kerjaan', {headers})
     },
     apply(credentials){
-        console.log('yeay berhasil')
         const token = localStorage.getItem('token')
         const headers = {Authorization: `Bearer ${token}`}
-        return Api().post('apply', credentials, {headers})
+        return Api().post('masukkan', credentials, {headers})
     },
-
+    nama(){
+        const token = localStorage.getItem('token')
+        const headers = {Authorization: `Bearer ${token}`}
+        return Api().get('nama', {headers})
+    },
+    applicant(credentials){
+        const token = localStorage.getItem('token')
+        const headers = {Authorization: `Bearer ${token}`}
+        return Api().post('pendaftar', credentials, {headers})
+    },
 }

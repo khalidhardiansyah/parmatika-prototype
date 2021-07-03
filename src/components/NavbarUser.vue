@@ -59,14 +59,9 @@ export default {
     name : 'NavbarUser',
     methods:{
       Logout(){
-        let c = confirm("Wanna log out?")
-        console.log(c)
-        if(c == true){
           localStorage.removeItem('token')
+          localStorage.removeItem('role')
           this.$router.push('/')
-        }else {
-          
-        }
       }
     },
     props:['name']

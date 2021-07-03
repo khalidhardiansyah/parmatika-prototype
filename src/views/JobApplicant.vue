@@ -31,7 +31,7 @@ export default {
   data(){
       return{
           Job_details:null,
-          name:"mega wati"
+          name:""
       }
   },
   methods:{
@@ -46,9 +46,15 @@ export default {
        const response = await AuthenticationService.kerjaan({
             })
             this.Job_details = response.data
+      },
+      async getNama(){
+       const response = await AuthenticationService.nama({
+       })
+            this.name = response.data
       }
   },
   beforeMount(){
+        this.getNama(),
         this.getPost()
     }
 };

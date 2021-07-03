@@ -38,11 +38,10 @@
               my-3
             "
           >
-            <li v-for="job_detail in job_details" :key="job_detail.id" class="my-3">
+            <li v-for="(job_detail, i) in job_details" :key="i" class="my-3">
               <Card 
-                
                 :job_title="job_detail.job_title"
-                :job_desc="job_detail.job_desc"
+                :job_desc="job_detail.description"
               />
             </li>
           </ul>
@@ -60,7 +59,7 @@
 import TheNavbar from "../components/TheNavbar.vue";
 import Card from "../components/Card.vue";
 import TheFooter from "../components/TheFooter.vue";
-
+import AuthenticationService from '../services/Auth-Service'
 export default {
   name: "Home",
   components: {
@@ -72,23 +71,22 @@ export default {
     return {
       title: "Let's Find Your Dream Job",
       subtitle:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum.",
+        "We provide job vacancies for job seekers who are pursuing their dreams. Therefore, we provide a job vacancy website which can be accessed easily.",
       title_latest: "Latest Job Posting",
-      job_details:[{
-        id:1, job_title:"Lorem IPsum" ,job_desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum."},
-        {
-        id:2, job_title:"Lorem IPsum" ,job_desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum."},
-        {
-        id:3, job_title:"Lorem IPsum" ,job_desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum."},
-        {
-        id:4, job_title:"Lorem IPsum" ,job_desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum."},
-        {
-        id:5, job_title:"Lorem IPsum" ,job_desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum."},
-        {
-        id:6, job_title:"Lorem IPsum" ,job_desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quia provident deserunt corporis rem temporibus repellendus neque culpa id non. Dignissimos, maxime debitis doloribus libero quia quidem quod atque ipsum."}
-      ]
+      job_details:null
   }
 },
+    methods: {
+    async getPost(){
+      const response = await AuthenticationService.kerjaan({
+            })
+      console.log(response)
+      this.job_details = response.data
+    },
+    },
+    beforeMount(){
+      this.getPost()
+    }
 };
 </script>
 

@@ -68,8 +68,8 @@ export default {
                 password:this.password,
                 role:this.role
             })
-            this.$root.push('/home')
-            
+            alert('Success Create Account')
+            this.$router.push('/')
         }
     }
 };
